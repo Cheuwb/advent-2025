@@ -44,8 +44,6 @@ int main() {
     const int LOCKSIZE = 100;
     int password = 0;
 
-    bool crossZero = false;
-
     while (getline(inputFile, line)) {
         line_counter++;
         char rotation = line[0];
@@ -67,26 +65,20 @@ int main() {
             // subtraction
             overRotate -= rotateBy;
             if (position != 0 && (overRotate < 0)) {
-                crossZero = true;
+                password++;
             }
             position = (position - rotateBy + 100) % 100;
             
         } else {
             overRotate += rotateBy;
             if (position != 0 && (overRotate > 100)) {
-                crossZero = true;
+                password++;
             }
             position = (position + rotateBy) % 100;
         }
         // password is the number of times it counts to 0.
         if (position == 0) {
             password++;
-        }
-
-        // increment position whenever it passes 0 as well
-        if (crossZero) {
-            password++;
-            crossZero = false;
         }
     }
 
