@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/briancheu/coding/advent-2026/1/day1'
+relocations:     []
+...

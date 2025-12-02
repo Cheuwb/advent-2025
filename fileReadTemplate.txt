@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    const string filename = "sample.txt";
+    ifstream inputFile(filename);
+
+    if (!inputFile.is_open()) {
+        return 1;
+    }
+
+    string line;
+    int line_counter = 0;
+
+    while (getline(inputFile, line)) {
+        line_counter++;
+        cout << line << "\n";
+    }
+
+    inputFile.close();
+
+
+    return 0;
+}
