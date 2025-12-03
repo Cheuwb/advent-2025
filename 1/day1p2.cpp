@@ -30,7 +30,7 @@ using namespace std;
  */
 
 int main() {
-    const string filename = "input1.txt";
+    const string filename = "sample.txt";
     ifstream inputFile(filename);
 
     if (!inputFile.is_open()) {
